@@ -11,22 +11,23 @@ const RatingEmoji = () => {
         }
     };
 
-const emojis = (arg: number) => {
-    switch (arg) {
-    case 1:
-        return "😔";        //substituir por codigos hashs
-    case 2:
-        return "😐";
-    case 3:
-        return "😊";
-    case 4:
-        return "😃";
-    case 5:
-        return "😍";
-    default:
-        return "🤔";
-    }
-};
+    const emojis = (arg: number) => {
+        switch (arg) {
+        case 1:
+            return "\u{1F614}"; // 😔
+        case 2:
+            return "\u{1F610}"; // 😐
+        case 3:
+            return "\u{1F60A}"; // 😊
+        case 4:
+            return "\u{1F603}"; // 😃
+        case 5:
+            return "\u{1F60D}"; // 😍
+        default:
+            return "\u{1F914}"; // 🤔
+        }
+    };
+    
 
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const numero = parseFloat(e.target.value);
